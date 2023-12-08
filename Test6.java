@@ -44,7 +44,7 @@ public class Test6 {
             wait.until(ExpectedConditions.titleContains("Customer Service"));
 
             logger.log(Level.INFO, "Verifying the Help page...");
-            WebElement someElementOnHelpPage = driver.findElement(By.xpath("//div[@id=\"wrapper\"]/div[1]/div[1]/div[3]/span[\"How can we help you today?\"]"));
+            WebElement someElementOnHelpPage = driver.findElement(By.xpath("/html/body/div[5]/div[2]/div[1]/div[1]/div[3]/h1"));
             Assert.assertTrue(someElementOnHelpPage.isDisplayed(), "Help page did not load successfully.");
 
             JavascriptExecutor js = (JavascriptExecutor) driver;
